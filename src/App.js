@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+
+import './App.css'
+import Landingpage from './Component/Landingpage'
+import DashBoard from './Component/DashBoard'
+import AddTopic from './Component/AddTopic'
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Usercreate from './Component/Usercreate'
+
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <BrowserRouter >
+      <div className="App">
+         <Routes>
+         <Route path= '/' element= { <Landingpage />} />
+         <Route path = '/create' element = { < Usercreate />} />
+          <Route path='/user/:StudentName' element={<DashBoard />} />
+          <Route path='/addtopic/:StudentName' element={<AddTopic />} />
+        </Routes> 
+      </div>
+    </BrowserRouter>
+  )
 }
 
-export default App;
+export default App
+

@@ -1,6 +1,6 @@
-.App {
+/* .App {
   text-align: center;
-}
+} */
 
 .App-logo {
   height: 40vmin;
@@ -35,4 +35,35 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+
+.app{
+  width: 50vw;
+  height: 50vh
+}
+/* Style buttons */
+.btn1 {
+  margin-left: 20px;
+  background-color: DodgerBlue; /* Blue background */
+  border: none; /* Remove borders */
+  color: white; /* White text */
+  padding: 12px 16px; /* Some padding */
+  font-size: 16px; /* Set a font size */
+  cursor: pointer; /* Mouse pointer on hover */
+}
+
+/* Darker background on mouse-over */
+.btn1:hover {
+  background-color: RoyalBlue;
+}
+
+.dashboard{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-content: space-around;
+  align-items: center;
+
 }
