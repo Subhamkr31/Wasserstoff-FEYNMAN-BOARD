@@ -46,7 +46,7 @@ const getUser = async (req, res) => {
         if (!findUser) return res.status(400).send({ status: false, message: "UserName not Found" });
 
         // console.log(findUser);
-        res.status(200).send({  status: true, 'data': findUser })
+        res.status(200).send({ status: true, 'data': findUser })
 
     } catch (error) {
         return res.status(500).send({ status: false, message: error.message });
@@ -69,7 +69,7 @@ const updateTopic = async (req, res) => {
 
         let findUser = await userModel.findOneAndUpdate({ _id: userId }, { $addToSet: { topic: { $each: [{ topicName: topicname, addTopic: addTopic }] } } }, { new: true })
 
-        res.status(200).send({  status: true, 'data': findUser })
+        res.status(200).send({ status: true, 'data': findUser })
     } catch (error) {
         return res.status(500).send({ status: false, message: error.message });
     }
